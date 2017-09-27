@@ -1,0 +1,110 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: $primary-color;
+}
+
+.form-container {
+  max-width: 70%;
+  width: 600px;
+  background-color: #334D5C;
+  margin: 40px auto;
+  padding: 20px 20px;
+  position: absolute;
+  top: 0; left: 0; bottom: 35%; right: 0;
+  @include breakpoint(small) {bottom: 35%;}
+  #form-caption {
+    color: $text-color;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+  #contact-me {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    @include breakpoint(small) { font-size: 3em;}
+    letter-spacing: 2px;
+    font-weight: 700;
+    letter-spacing: 5px;
+  }
+  #form-title {
+    font-size: 1em;
+    font-weight: 200;
+  }
+  .form-main {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.form-group {
+  .label-title {
+    color: $text-color;
+    text-align: left;
+  }
+  textarea{
+    width: 100%; height: 150px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+
+    &:focus {outline: 3px solid $accent-color;}
+    background-color: $fields-color;
+  }
+}
+
+.user-input {
+  background-color: $fields-color;
+  width: 100%;
+  height: 40px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: $primary-color;
+  outline: none;
+  &:focus {
+    outline: 3px solid $accent-color;
+  }
+}
+
+#button {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 60px;
+  color: #01599e;
+  background-color: $accent-color;
+  outline: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
+  letter-spacing: 7px;
+  font-size: 1.5em;
+}
+
+#button:hover {
+  background-color: rgba(0,0,0,0);
+  color: black;
+}
+
+.ease {
+  margin-top: -60px;
+  width: 0px;
+  height: 60px;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.submit:hover .ease {
+  width: 100%;
+  background-color: $primary-color;
+  border: 3px solid $accent-color;
+}
